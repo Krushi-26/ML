@@ -1,0 +1,52 @@
+# ML
+machine learning projrct
+import sys
+print ('python: {}'.format(sys.version))
+import scipy
+print ('scipy: {}' .format(sys.version))
+import numpy
+print ('numpy: {}' .format(sys.version))
+import matplotlib
+print ('matplotlib: {}' .format(sys.version))
+import panda
+print ('panda: {}' .format(sys.version))
+import sklearn
+print ('sklearn: {}' . format(sys.version))
+
+
+import pandas
+from pandas.plotting import scatter_matrix
+from matlotlib import pyplot
+from sklearn_model_selection import train_test_split
+from sklearn_model_selectiom import cross_val_score
+from sklearn_model_selection import StratifiedKfold
+from sklearn_matrics import classification_report 
+from sklearn_matrics import confusion_matrix
+from sklearn_matrics import accuracy_score
+from sklearn_linear_model import LogisticRegressiion
+from sklearn_tree import DecisionTreeClassifier
+from sklearn_neighbors import KNeighborsClassifier
+from sklearn_discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn_naive_bytes import GaussianNB
+from sklearn_svm import SVC
+from sklearn import model_selection
+from sklearn.essemble import VotingClassifier
+
+
+#loading the data
+url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master.iris.cvs"
+names = ['sepal-width,','petal-length','class']
+dataset = read_csv(url, names = names)
+
+
+#dimensions of the dataset
+print(dataset.shape)
+
+print(dataset.head(20))
+
+print(dataset.describe())
+
+print(dataset.groupby('class').size())
+
+dataset.plot (kind = 'box',subplots=True,layout = (2,2),sharex=False, sharey = False)
+pypplot.show()
